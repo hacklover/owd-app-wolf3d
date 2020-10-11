@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <script src="js-dos.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+      #loading {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 20px;
+        text-align: center;
+        margin-top: -10px;
+        color: white;
+        font-family: monospace, FreeMono;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="js-dos"></canvas>
+    <div id="loading"></div>
+    <script>
+      const elementLoading = document.getElementById('loading')
+      const queryString = window.location.search;
+
+      if (queryString) {
+        const urlParams = new URLSearchParams(queryString);
+        const game = urlParams.get('game')
+        const command = urlParams.get('command')
+
+        if (game) {
+          Dos(document.getElementById("js-dos"), {
+            wdosboxUrl: "wdosbox.js",
+            log: (message) => {},
+            onerror: (message) => {},
+            onprogress: (stage, total, loaded) => {
+              elementLoading.innerText = parseInt(loaded * 100 / total).toString() + "%"
+            }
+          }).ready((fs, main) => {
+            elementLoading.remove()
+
+            fs.extract(game, '/game').then(() => {
+              main(["-c", "cd game", "-c", command])
+            });
+          });
+        }
+      }
+    </script>
+  </body>
+</html>
