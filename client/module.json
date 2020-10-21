@@ -1,6 +1,6 @@
 {
   "name": "wolf3d",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "singleton": true,
   "autostart": false,
   "commands": true,

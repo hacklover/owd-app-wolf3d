@@ -3,7 +3,7 @@
 </template>
 
 <script>
-  import WindowIframe from "~/core/components/window/iframe/WindowIframe";
+  import WindowIframe from "@owd-client/core/src/components/window/iframe/WindowIframe";
 
   export default {
     name: "WindowWolf3D",
@@ -15,7 +15,7 @@
     },
     methods: {
       iframeFocus() {
-        document.getElementsByTagName('iframe')[0].focus()
+        document.getElementById(this.data.module.name+'-iframe').focus()
       }
     },
     mounted() {
