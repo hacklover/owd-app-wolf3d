@@ -3,7 +3,6 @@
   "version": "2.0.0",
   "singleton": true,
   "autostart": false,
-  "commands": true,
   "windows": [
     {
       "name": "WindowWolf3D",
