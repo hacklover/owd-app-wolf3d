@@ -15,7 +15,7 @@
     },
     methods: {
       iframeFocus() {
-        document.getElementById(this.data.module.name+'-iframe').focus()
+        document.getElementById(this.data.module.moduleInfo.name+'-iframe').focus()
       }
     },
     mounted() {
