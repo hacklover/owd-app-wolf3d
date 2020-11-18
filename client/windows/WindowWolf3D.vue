@@ -1,5 +1,5 @@
 <template>
-  <WindowIframe :data="data" @iframeLoaded="iframeFocus" />
+  <WindowIframe :data="data" @iframeLoaded="iframeFocus" @iframeFocusIn="iframeFocus" />
 </template>
 
 <script>
@@ -19,6 +19,8 @@
       }
     },
     mounted() {
+      this.iframeFocus()
+
       this.$store.subscribe((mutation) => {
         if (mutation.type === 'core/windows/SET_WINDOW_FOCUSES') {
           if (this.$store.getters['core/windows/windowFocused'] === this.data.uniqueID) {
