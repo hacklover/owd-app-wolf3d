@@ -8,7 +8,7 @@
     "url": "https://github.com/hacklover"
   },
   "singleton": true,
-  "autostart": false,
+  "autostart": true,
   "windows": [
     {
       "name": "WindowWolf3D",
