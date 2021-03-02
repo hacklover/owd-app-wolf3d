@@ -10,7 +10,7 @@
 </p>
 
 ## Demo
-[Try it out](https://hacklover.net), just open the terminal and type "wolf3d"
+[Try it out](https://hacklover.net/client), just open the terminal and type "wolf3d"
 
 ## Overview
 This module is an iframe that loads the original Wolfenstein 3D game using the [js-dos](https://github.com/caiiiycuk/js-dos) emulator. 
