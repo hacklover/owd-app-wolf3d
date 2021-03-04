@@ -1,6 +1,6 @@
-import {Module} from "@owd-client/core";
+import {ModuleApp} from "@owd-client/core";
 
-export default class WolfensteinModule extends Module {
+export default class WolfensteinModule extends ModuleApp {
   constructor(context) {
     super(context)
   }
@@ -8,7 +8,7 @@ export default class WolfensteinModule extends Module {
   loadCommands({store}) {
     return {
       'wolf3d': function () {
-        store.dispatch('core/windows/windowOpen', 'WindowWolf3D');
+        store.dispatch('core/window/windowOpen', 'WindowWolf3D');
       },
     }
   }

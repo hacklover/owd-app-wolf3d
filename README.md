@@ -22,7 +22,10 @@ You can potentially create new modules and load different games simply by changi
 - Copy the content of the `client` module folder into `owd-client/src/modules/wolf3d`
 - Copy the content of the `client/public` public folder into `owd-client/public`
 - Download the game [from here](https://hacklover.net/js-dos/games/WOLF3D.zip) ([mirror](https://mega.nz/file/qRlXUKpR#MN8d3hqPQhQaMCUtuVSmIqdgjbqYv3CGrQUo3sLPYF0)) and put it into `owd-client/public/js-dos/games/WOLF3D.zip`
-- Add the reference of this module into `owd-client/config/modules.json` 
+- Add the reference of this module into `owd-client/config/modules.json`
+
+## Compatibility
+- Open Web Desktop client v2.0.0-alpha.2
 
 ## License
 This project is released under the [MIT License](LICENSE)
