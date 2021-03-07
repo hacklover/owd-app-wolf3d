@@ -25,7 +25,7 @@ You can potentially create new modules and load different games simply by changi
 - Add the reference of this module into `owd-client/config/modules.json`
 
 ## Compatibility
-- Open Web Desktop client v2.0.0-alpha.2
+- Open Web Desktop client v2.0.0-alpha.3
 
 ## License
 This project is released under the [MIT License](LICENSE)
