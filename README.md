@@ -21,7 +21,7 @@ You can potentially create new modules and load different games simply by changi
 ## Quick install
 - Copy the content of the `client` module folder into `owd-client/src/modules/wolf3d`
 - Copy the content of the `client/public` public folder into `owd-client/public`
-- Download the game [from here](https://hacklover.net/js-dos/games/WOLF3D.zip) ([mirror](https://mega.nz/file/qRlXUKpR#MN8d3hqPQhQaMCUtuVSmIqdgjbqYv3CGrQUo3sLPYF0)) and put it into `owd-client/public/js-dos/games/WOLF3D.zip`
+- Download the game [from here](https://archive.org/details/Wolfenstein3d) and put it into `owd-client/public/js-dos/games/WOLF3D.zip`
 - Add the reference of this module into `owd-client/config/modules.json`
 
 ## Compatibility
