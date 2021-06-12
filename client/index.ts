@@ -5,13 +5,6 @@ export default class WolfensteinModule extends ModuleApp {
   loadModule() {
     return {
       name: "wolf3d",
-      version: "2.0.0",
-      license: "MIT",
-      homepage: "https://github.com/hacklover/owd-wolf3d",
-      author: {
-        name: "hacklover",
-        url: "https://github.com/hacklover"
-      },
       singleton: true,
       windows: [
         {
@@ -28,7 +21,6 @@ export default class WolfensteinModule extends ModuleApp {
           minimizable: false,
           maximizable: false,
           resizable: false,
-          noContentSpacing: true,
           size: {
             width: 1048,
             height: 684
@@ -37,6 +29,10 @@ export default class WolfensteinModule extends ModuleApp {
             x: -1,
             y: 0,
             z: 0
+          },
+          theme: {
+            dense: false,
+            noContentSpacing: true,
           },
           metaData: {
             iframeUrl: "js-dos/index.html?game=games/WOLF3D.zip&command=WOLF3D.exe"
