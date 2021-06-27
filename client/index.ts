@@ -2,7 +2,7 @@ import {ModuleApp} from "@owd-client/core/index";
 import WindowWolf3D from "./windows/WindowWolf3D.vue";
 
 export default class WolfensteinModule extends ModuleApp {
-  loadModule() {
+  setup() {
     return {
       name: "wolf3d",
       singleton: true,
@@ -42,7 +42,7 @@ export default class WolfensteinModule extends ModuleApp {
     }
   }
 
-  loadCommands({store}) {
+  setupCommands({store}) {
     return {
       'wolf3d': function () {
         store.dispatch('core/window/windowOpen', 'WindowWolf3D');
