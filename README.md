@@ -26,16 +26,16 @@ You can potentially create new modules and load different games simply by changi
 - Move to your client folder, then
   ```
   # Install this module with Npm
-  npm install hacklover/owd-app-wolf3d
+  npm install https://github.com/hacklover/owd-app-wolf3d
   
   # Or using Yarn
-  yarn add hacklover/owd-app-wolf3d
+  yarn add https://github.com/hacklover/owd-app-wolf3d
   ```
 - Define this module in `owd-client/client.extensions.ts`
   ```js
   import AboutModule from "@owd-client/core/src/modules/app/about";
   import DebugModule from "@owd-client/core/src/modules/app/debug";
-  import WolfensteinModule from "hacklover/owd-app-wolf3d/client";
+  import WolfensteinModule from "owd-app-wolf3d/client";
 
   export default {
     app: {
