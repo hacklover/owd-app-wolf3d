@@ -23,13 +23,35 @@ I chose to put Wolf3D in an iframe to keep OWD's code and resources lean, especi
 You can potentially create new modules and load different games simply by changing the path of the iframe.
 
 ## Quick install
-- Copy the content of the `client` module folder into `owd-client/src/modules/wolf3d`
-- Copy the content of the `client/public` public folder into `owd-client/public`
+- Move to your client folder, then
+  ```
+  # Install this module with Npm
+  npm install hacklover/owd-app-wolf3d
+  
+  # Or using Yarn
+  yarn add hacklover/owd-app-wolf3d
+  ```
+- Define this module in `owd-client/client.extensions.ts`
+  ```js
+  import AboutModule from "@owd-client/core/src/modules/app/about";
+  import DebugModule from "@owd-client/core/src/modules/app/debug";
+  import WolfensteinModule from "hacklover/owd-app-wolf3d/client";
+
+  export default {
+    app: {
+      modules: [
+        AboutModule,
+        DebugModule,
+        WolfensteinModule,
+      ]
+    },
+    ...
+  ```
+- Copy the content of the [client/public](https://github.com/hacklover/owd-app-wolf3d/tree/master/client/public) folder into `owd-client/public`
 - Download the game [from here](https://archive.org/details/Wolfenstein3d) and put it into `owd-client/public/js-dos/games/WOLF3D.zip`
-- Add the reference of this module into `owd-client/config/modules.json`
 
 ## Compatibility
-- Open Web Desktop client v2.0.0-beta
+- Open Web Desktop client v2.0.0-beta.1
 
 ## License
 This project is released under the [MIT License](LICENSE)
